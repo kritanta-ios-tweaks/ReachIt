@@ -1,10 +1,10 @@
 ARCHS = arm64 arm64e
-TARGET = iphone:clang:11.2:11.2
+TARGET = iphone:clang:13.2:11.2
 
 include $(THEOS)/makefiles/common.mk
 
 BUNDLE_NAME = ReachItPrefs
-$(BUNDLE_NAME)_FILES = Preferences.m
+$(BUNDLE_NAME)_FILES = Preferences.m KRLinkCell.m KRTableCell.m KRTwitterCell.m
 $(BUNDLE_NAME)_INSTALL_PATH = /Library/PreferenceBundles
 $(BUNDLE_NAME)_FRAMEWORKS = UIKit
 $(BUNDLE_NAME)_PRIVATE_FRAMEWORKS = Preferences
