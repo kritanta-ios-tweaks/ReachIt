@@ -176,10 +176,10 @@ NSInteger style;
     ];
 
     [alertController addAction:[UIAlertAction actionWithTitle:@"Damn!" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-        [((UIApplication*)self).keyWindow.rootViewController dismissViewControllerAnimated:YES completion:NULL];
+        [((UIApplication*)self).windows.firstObject.rootViewController dismissViewControllerAnimated:YES completion:NULL];
     }]];
 
-    [((UIApplication*)self).keyWindow.rootViewController presentViewController:alertController animated:YES completion:NULL];
+    [((UIApplication*)self).windows.firstObject.rootViewController presentViewController:alertController animated:YES completion:NULL];
 }
 
 %end
